@@ -22,6 +22,7 @@ This repository publishes the audit rubric plainly and provides worked-example a
 
 - [`artifacts/foundation-model-roster-template.md`](artifacts/foundation-model-roster-template.md) — template for the versioned foundation-model roster every enterprise-tier AI platform should publish
 - [`artifacts/failure-mode-disclosure-template.md`](artifacts/failure-mode-disclosure-template.md) — template for the periodic failure-mode disclosure every enterprise-tier AI platform should publish, with a worked example populated from the framework operator's direct observation
+- [`artifacts/open-weights-letter-2026-07-24-briefing.md`](artifacts/open-weights-letter-2026-07-24-briefing.md) ([PDF](artifacts/open-weights-letter-2026-07-24-briefing.pdf)) — team briefing on the 24 July 2026 *Open Weights and American AI Leadership* letter and how it interacts with this rubric. Records who signed, who did not (OpenAI, Anthropic, Google, xAI), and the audit-context reading of the non-signers
 
 ## The seven-point audit
 
