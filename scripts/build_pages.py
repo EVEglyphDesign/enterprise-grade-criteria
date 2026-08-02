@@ -339,6 +339,7 @@ def build_gcf():
     <a class="btn" href="{pdf}">Download the controlled PDF</a>
     <a class="btn ghost" href="https://github.com/EVEglyphDesign/enterprise-grade-criteria/blob/main/artifacts/global-compliance-framework-assessment.md">Markdown source</a>
     <a class="btn ghost" href="../positioning/">Positioning note</a>
+    <a class="btn ghost" href="../use/">Practitioner kit</a>
     <a class="btn ghost" href="../index.html">All artifacts</a>
   </div>
 </div></section>
@@ -391,6 +392,7 @@ def build_note():
   <div class="actions">
     <a class="btn" href="{pdf}">Download the one-page PDF</a>
     <a class="btn ghost" href="../gcf/">Read EgD-GCF-001</a>
+    <a class="btn ghost" href="../use/">Practitioner kit</a>
     <a class="btn ghost" href="../index.html">All artifacts</a>
   </div>
 </div></section>
@@ -411,6 +413,135 @@ def build_note():
     return sha
 
 
+def build_use():
+    """The practitioner surface: the kit, the licence, and how to run an assessment."""
+    lic_src = os.path.join(ROOT, "PRACTITIONER-LICENCE.md")
+    lic_raw = open(lic_src, encoding="utf-8").read()
+    lic_html, _ = render(lic_raw)
+    sha = hashlib.sha256(lic_raw.encode("utf-8")).hexdigest()
+
+    files = [
+        ("EVEglyphDesign_Global_Compliance_Framework_Assessment.pdf", "gcf"),
+        ("EVEglyphDesign_GCF_Positioning_Note.pdf", "positioning"),
+        ("EVEglyphDesign_GCF_Vendor_Questionnaire.pdf", None),
+        ("EVEglyphDesign_GCF_Worked_Example.pdf", None),
+        ("EVEglyphDesign_GCF_Client_One_Pager.pdf", None),
+        ("EVEglyphDesign_GCF_Scoring_Workbook.xlsx", None),
+    ]
+
+    hero = f"""
+<section class="hero"><div class="wrap">
+  <p class="eyebrow">EVEglyphDesign · Practitioner kit</p>
+  <h1>Use this with your own clients</h1>
+  <div class="rule"></div>
+  <p class="lede">Everything needed to run a vendor sovereignty assessment end to end: the
+  reference model, a forty-one question vendor questionnaire, a fillable scoring workbook, a
+  worked example against a named vendor, and a one-page explanation to hand to the client.
+  Free to use in paid engagements, unmodified, with attribution.</p>
+  <div class="actions">
+    <a class="btn" href="EVEglyphDesign_GCF_Scoring_Workbook.xlsx">Download the workbook</a>
+    <a class="btn ghost" href="EVEglyphDesign_GCF_Vendor_Questionnaire.pdf">The questionnaire</a>
+    <a class="btn ghost" href="../gcf/">Read the method</a>
+  </div>
+</div></section>
+<div class="wrap">
+  <div class="cards">
+    <div class="card">
+      <p class="id">EgD-GCF-001 · The method</p>
+      <h3><a href="../gcf/">Global Compliance Framework Assessment</a></h3>
+      <p>Eight sovereignty control domains, a jurisdictional register anchored to the EU AI
+      Act, EU Data Act, GDPR and DORA, four veto conditions, and a 16-point scoring sheet.
+      Read this first; everything else operationalises it.</p>
+      <p><a href="../gcf/">Read the page</a> &nbsp;·&nbsp;
+      <a href="EVEglyphDesign_Global_Compliance_Framework_Assessment.pdf">PDF</a></p>
+    </div>
+    <div class="card">
+      <p class="id">EgD-GCF-003 · Send to the vendor</p>
+      <h3><a href="EVEglyphDesign_GCF_Vendor_Questionnaire.pdf">Vendor questionnaire</a></h3>
+      <p>Forty-one questions ordered by control domain, phrased so an evasive answer is
+      visible as an evasion. Part B explains the three patterns that recur in the replies:
+      the tier shift, the setting that is not a term, and the attestation with the wrong
+      scope.</p>
+      <p><a href="EVEglyphDesign_GCF_Vendor_Questionnaire.pdf">PDF, 4 pages</a></p>
+    </div>
+    <div class="card">
+      <p class="id">Workbook · Score it</p>
+      <h3><a href="EVEglyphDesign_GCF_Scoring_Workbook.xlsx">Fillable scoring workbook</a></h3>
+      <p>Four sheets. Score each domain 0, 1 or 2 from a dropdown, record the evidence, and
+      the result sheet computes the total, the verdict band, and applies the four veto
+      conditions as an override. Untouched, it reads “not yet scored” rather than a false
+      decline.</p>
+      <p><a href="EVEglyphDesign_GCF_Scoring_Workbook.xlsx">XLSX</a></p>
+    </div>
+    <div class="card">
+      <p class="id">EgD-GCF-004 · See it done</p>
+      <h3><a href="EVEglyphDesign_GCF_Worked_Example.pdf">Worked example — Microsoft 365 Copilot</a></h3>
+      <p>A completed assessment scored from public documentation, 2 August 2026. Total 11 of
+      16, no veto triggered. Shows what an evidenced 2, an asserted 1 and an absent 0 look
+      like against a real supplier — and why a default that changed silently costs a point.</p>
+      <p><a href="EVEglyphDesign_GCF_Worked_Example.pdf">PDF, 2 pages</a></p>
+    </div>
+    <div class="card">
+      <p class="id">EgD-GCF-005 · Hand to the client</p>
+      <h3><a href="EVEglyphDesign_GCF_Client_One_Pager.pdf">What we check before you sign</a></h3>
+      <p>One page, no jargon, for the sponsor who wants to know why two weeks of scoring is
+      worth it before a deal everyone already expects to approve.</p>
+      <p><a href="EVEglyphDesign_GCF_Client_One_Pager.pdf">PDF, 1 page</a></p>
+    </div>
+    <div class="card">
+      <p class="id">EgD-GCF-002 · Position it</p>
+      <h3><a href="../positioning/">Six frameworks tell you what to build</a></h3>
+      <p>For the conversation where a client says they already have a framework. BCG,
+      Gartner, Bain, McKinsey and NIST: five adoption frameworks and one governance
+      framework, none of which scores the counterparty.</p>
+      <p><a href="../positioning/">Read the page</a> &nbsp;·&nbsp;
+      <a href="EVEglyphDesign_GCF_Positioning_Note.pdf">PDF</a></p>
+    </div>
+  </div>
+
+  <h2 id="how-to-run-it" style="border-top:2px solid var(--orange);
+    font-family:Fraunces,Georgia,serif; font-size:27px; padding-top:22px;
+    margin:52px 0 14px">How to run it</h2>
+  <ol>
+    <li><strong>Frame it with the client.</strong> Send the one-pager to the sponsor before
+    the evaluation starts, so the exercise is understood as pre-signature leverage rather
+    than a compliance tax.</li>
+    <li><strong>Read the method.</strong> Eight domains, four veto conditions, and the rule
+    that a trust-centre page never scores above 1.</li>
+    <li><strong>Send the questionnaire</strong> while the vendor is still selling. Require a
+    written response citing clauses, not links.</li>
+    <li><strong>Score in the workbook</strong> from what came back. Evidence column is not
+    optional — a score without a citation is an opinion, and it will not survive the first
+    challenge from the vendor's account team.</li>
+    <li><strong>Deliver two things:</strong> the completed sheet, and a ranked list of the
+    clauses to change. The worked example shows what that output looks like.</li>
+  </ol>
+  <p>The whole cycle is a fortnight of elapsed time and a day or two of effort. The output
+  is a negotiation agenda that exists while the buyer still has leverage.</p>
+
+  <h2 id="licence" style="border-top:2px solid var(--orange);
+    font-family:Fraunces,Georgia,serif; font-size:27px; padding-top:22px;
+    margin:52px 0 14px">Practitioner licence</h2>
+  <article>{lic_html}</article>
+</div>
+"""
+    foot = footer(f'<span class="hash">SHA-256 of licence &nbsp;{sha}</span><br>')
+    out = page(
+        "Practitioner kit — use this with your own clients — EVEglyphDesign",
+        "The EVEglyphDesign Global Compliance Framework practitioner kit: reference model, "
+        "vendor questionnaire, fillable scoring workbook, worked example and client "
+        "one-pager. Free to use in paid engagements, unmodified, with attribution.",
+        hero + foot, depth=1,
+        canonical="https://eveglyphdesign.github.io/enterprise-grade-criteria/use/",
+    )
+    d = os.path.join(DOCS, "use")
+    os.makedirs(d, exist_ok=True)
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(out)
+    for name, _ in files:
+        shutil.copy(os.path.join(ROOT, "artifacts", name), os.path.join(d, name))
+    return sha
+
+
 def build_index():
     hero = """
 <section class="hero"><div class="wrap">
@@ -422,6 +553,7 @@ def build_index():
   for the whole stack it delivers — including the foundation models it did not build.</p>
   <div class="actions">
     <a class="btn" href="gcf/">Read EgD-GCF-001</a>
+    <a class="btn ghost" href="use/">Practitioner kit</a>
     <a class="btn ghost" href="https://github.com/EVEglyphDesign/enterprise-grade-criteria">Repository</a>
   </div>
 </div></section>
@@ -446,6 +578,17 @@ def build_index():
       NIST AI RMF rather than competing with it.</p>
       <p><a href="positioning/">Read the page</a> &nbsp;·&nbsp;
       <a href="positioning/EVEglyphDesign_GCF_Positioning_Note.pdf">PDF</a></p>
+    </div>
+    <div class="card">
+      <p class="id">Practitioner kit · EgD-GCF-003 to 005</p>
+      <h3><a href="use/">Use this with your own clients</a></h3>
+      <p>The kit for advisers running the assessment for their own clients: a forty-one
+      question vendor questionnaire, a fillable scoring workbook, a worked example against a
+      named vendor, a client-facing one-pager, and a licence permitting use in paid
+      engagements, unmodified, with attribution.</p>
+      <p><a href="use/">Open the kit</a> &nbsp;·&nbsp;
+      <a href="use/EVEglyphDesign_GCF_Scoring_Workbook.xlsx">Workbook</a> &nbsp;·&nbsp;
+      <a href="use/EVEglyphDesign_GCF_Vendor_Questionnaire.pdf">Questionnaire</a></p>
     </div>
     <div class="card">
       <p class="id">Template</p>
@@ -494,5 +637,7 @@ if __name__ == "__main__":
     open(os.path.join(DOCS, ".nojekyll"), "w").close()
     sha = build_gcf()
     nsha = build_note()
+    usha = build_use()
     build_index()
-    print("built docs/ · EgD-GCF-001", sha[:16], "· EgD-GCF-002", nsha[:16])
+    print("built docs/ · EgD-GCF-001", sha[:16], "· EgD-GCF-002", nsha[:16],
+          "· licence", usha[:16])

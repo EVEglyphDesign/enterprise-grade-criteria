@@ -27,6 +27,18 @@ This repository publishes the audit rubric plainly and provides worked-example a
 - [`artifacts/global-compliance-framework-assessment.md`](artifacts/global-compliance-framework-assessment.md) ([public page](https://eveglyphdesign.github.io/enterprise-grade-criteria/gcf/) · [PDF](artifacts/EVEglyphDesign_Global_Compliance_Framework_Assessment.pdf)) — **EgD-GCF-001**, the buyer-side reference model. Eight sovereignty control domains, a jurisdictional register anchored to the EU AI Act, EU Data Act, GDPR, DORA and the major national regimes, four veto conditions, a 16-point scoring sheet, contract language hooks, and ten patterns to flag in an incumbent vendor's AI proposal. Written to be handed to a vendor unchanged
 - [`artifacts/open-weights-letter-2026-07-24-briefing.md`](artifacts/open-weights-letter-2026-07-24-briefing.md) ([PDF](artifacts/open-weights-letter-2026-07-24-briefing.pdf)) — team briefing on the 24 July 2026 *Open Weights and American AI Leadership* letter and how it interacts with this rubric. Records who signed, who did not (OpenAI, Anthropic, Google, xAI), and the audit-context reading of the non-signers
 
+## Practitioner kit — use this with your own clients
+
+Public surface: [the practitioner kit](https://eveglyphdesign.github.io/enterprise-grade-criteria/use/).
+Advisers may run this assessment for their own clients, in paid engagements, provided the
+documents are used unmodified and EVEglyphDesign is named — see
+[`PRACTITIONER-LICENCE.md`](PRACTITIONER-LICENCE.md).
+
+- [`artifacts/gcf-vendor-questionnaire.md`](artifacts/gcf-vendor-questionnaire.md) ([PDF](artifacts/EVEglyphDesign_GCF_Vendor_Questionnaire.pdf)) — **EgD-GCF-003**, forty-one questions to put to a supplier in writing, ordered by control domain, plus the three patterns that recur in the replies
+- [`artifacts/EVEglyphDesign_GCF_Scoring_Workbook.xlsx`](artifacts/EVEglyphDesign_GCF_Scoring_Workbook.xlsx) — the fillable 16-point scoring workbook. Dropdown scoring, evidence columns, computed verdict, and the four veto conditions applied as an override
+- [`artifacts/gcf-worked-example.md`](artifacts/gcf-worked-example.md) ([PDF](artifacts/EVEglyphDesign_GCF_Worked_Example.pdf)) — **EgD-GCF-004**, a completed assessment against Microsoft 365 Copilot scored from public documentation on 2 August 2026. Total 11 of 16, no veto triggered
+- [`artifacts/gcf-client-onepager.md`](artifacts/gcf-client-onepager.md) ([PDF](artifacts/EVEglyphDesign_GCF_Client_One_Pager.pdf)) — **EgD-GCF-005**, the one-page explanation to hand to the client sponsor before the evaluation starts
+
 ## The seven-point audit
 
 An AI platform vendor claiming enterprise tier should:

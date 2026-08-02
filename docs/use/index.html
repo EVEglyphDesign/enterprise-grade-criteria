@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Practitioner kit — use this with your own clients — EVEglyphDesign</title>
+<meta name="description" content="The EVEglyphDesign Global Compliance Framework practitioner kit: reference model, vendor questionnaire, fillable scoring workbook, worked example and client one-pager. Free to use in paid engagements, unmodified, with attribution.">
+<meta property="og:title" content="Practitioner kit — use this with your own clients — EVEglyphDesign">
+<meta property="og:description" content="The EVEglyphDesign Global Compliance Framework practitioner kit: reference model, vendor questionnaire, fillable scoring workbook, worked example and client one-pager. Free to use in paid engagements, unmodified, with attribution.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://eveglyphdesign.github.io/enterprise-grade-criteria/use/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdfaf4; --cream2:#f7f2e7; --ink:#1a1a1a; --line:#e7e1d3;
+  --mute:#6b665c; --orange:#e87722;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--orange); text-decoration:none; border-bottom:1px solid rgba(232,119,34,.35)}
+a:hover{border-bottom-color:var(--orange)}
+header.bar{
+  border-bottom:1px solid var(--line); background:var(--cream);
+  position:sticky; top:0; z-index:10;
+}
+header.bar .in{
+  max-width:1080px; margin:0 auto; padding:14px 28px;
+  display:flex; gap:16px; align-items:baseline; justify-content:space-between;
+  font-size:12.5px; letter-spacing:.04em; color:var(--mute);
+}
+header.bar .in a{color:var(--mute); border:0}
+header.bar .in a:hover{color:var(--orange)}
+header.bar strong{color:var(--ink); font-weight:600; letter-spacing:0}
+.wrap{max-width:1080px; margin:0 auto; padding:0 28px}
+.hero{padding:66px 0 34px; border-bottom:1px solid var(--line)}
+.eyebrow{
+  color:var(--orange); font-size:11.5px; font-weight:600;
+  letter-spacing:.22em; text-transform:uppercase; margin:0 0 20px;
+}
+h1{
+  font-family:Fraunces,Georgia,serif; font-weight:700; font-size:clamp(34px,5.2vw,52px);
+  line-height:1.08; letter-spacing:-.015em; margin:0 0 22px; max-width:17ch;
+}
+.rule{width:112px; height:3px; background:var(--orange); margin:0 0 26px}
+.lede{font-size:19.5px; line-height:1.55; max-width:62ch; margin:0 0 26px; color:#2b2926}
+.meta{
+  font-size:12.5px; color:var(--mute); display:flex; flex-wrap:wrap;
+  gap:8px 20px; margin:0 0 4px;
+}
+.meta b{font-weight:600; color:var(--ink)}
+.actions{display:flex; flex-wrap:wrap; gap:12px; margin:30px 0 4px}
+.btn{
+  display:inline-block; padding:11px 20px; border-radius:2px; font-size:14px;
+  font-weight:600; border:1px solid var(--orange); background:var(--orange);
+  color:var(--cream); letter-spacing:.01em;
+}
+.btn:hover{background:#d76b18; border-color:#d76b18; color:var(--cream)}
+.btn.ghost{background:transparent; color:var(--ink); border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--orange); color:var(--orange); background:transparent}
+.cols{display:grid; grid-template-columns:230px minmax(0,1fr); gap:56px; padding:44px 0 70px}
+nav.toc{position:sticky; top:74px; align-self:start; font-size:13.5px; line-height:1.5}
+nav.toc p{
+  margin:0 0 12px; font-size:11px; font-weight:600; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--mute);
+}
+nav.toc a{display:block; padding:5px 0 5px 12px; color:var(--mute); border:0;
+  border-left:2px solid var(--line)}
+nav.toc a:hover{color:var(--orange); border-left-color:var(--orange)}
+article h2{
+  font-family:Fraunces,Georgia,serif; font-weight:700; font-size:27px; line-height:1.2;
+  letter-spacing:-.01em; margin:52px 0 14px; padding-top:22px;
+  border-top:2px solid var(--orange);
+}
+article h2:first-child{margin-top:0}
+article h3{
+  font-family:Fraunces,Georgia,serif; font-weight:700; font-size:20px;
+  margin:34px 0 10px; letter-spacing:-.005em;
+}
+article p{margin:0 0 16px; max-width:70ch}
+article ul,article ol{margin:0 0 18px; padding-left:22px; max-width:70ch}
+article li{margin:0 0 10px}
+article li::marker{color:var(--orange)}
+blockquote{
+  margin:26px 0; padding:20px 24px; background:var(--cream2);
+  border:1px solid var(--line); border-left:3px solid var(--orange);
+  font-family:Fraunces,Georgia,serif; font-size:19px; line-height:1.5;
+}
+blockquote p{margin:0; max-width:none}
+.tablewrap{overflow-x:auto; margin:22px 0 26px}
+table{border-collapse:collapse; width:100%; font-size:15px; line-height:1.5}
+thead th{
+  text-align:left; background:var(--cream2); border-bottom:2px solid var(--orange);
+  padding:10px 12px; font-weight:600; vertical-align:bottom;
+}
+tbody td{padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.88em;
+  background:var(--cream2); border:1px solid var(--line); border-radius:2px;
+  padding:1px 5px;
+}
+hr{border:0; border-top:1px solid var(--line); margin:40px 0}
+footer{border-top:1px solid var(--line); padding:26px 0 46px; font-size:12.5px;
+  color:var(--mute); line-height:1.7}
+footer .mark{font-family:Fraunces,Georgia,serif; font-style:italic; color:var(--ink)}
+.hash{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px;
+  word-break:break-all}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px; margin:32px 0 8px}
+.card{
+  border:1px solid var(--line); background:var(--cream2); padding:24px 24px 22px;
+  border-top:3px solid var(--orange);
+}
+.card h3{font-family:Fraunces,Georgia,serif; font-size:20px; margin:0 0 8px; line-height:1.25}
+.card h3 a{border:0; color:var(--ink)}
+.card h3 a:hover{color:var(--orange)}
+.card p{margin:0 0 14px; font-size:15px; color:#3a3833}
+.card .id{font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--mute); font-weight:600; margin:0 0 10px}
+@media(max-width:860px){
+  .cols{grid-template-columns:1fr; gap:0; padding-top:30px}
+  nav.toc{position:static; margin-bottom:36px; border-bottom:1px solid var(--line);
+    padding-bottom:24px}
+  .hero{padding:44px 0 28px}
+}
+</style>
+</head><body>
+<header class="bar"><div class="in"><span><strong>EVEglyphDesign</strong> &nbsp;·&nbsp; <a href="../index.html">Enterprise-Grade Criteria</a></span><span><a href="https://github.com/EVEglyphDesign/enterprise-grade-criteria">Repository</a> &nbsp;·&nbsp; <a href="https://eveglyphdesign.github.io/eve-glyph-boot-contract/">Boot contract</a></span></div></header>
+
+<section class="hero"><div class="wrap">
+  <p class="eyebrow">EVEglyphDesign · Practitioner kit</p>
+  <h1>Use this with your own clients</h1>
+  <div class="rule"></div>
+  <p class="lede">Everything needed to run a vendor sovereignty assessment end to end: the
+  reference model, a forty-one question vendor questionnaire, a fillable scoring workbook, a
+  worked example against a named vendor, and a one-page explanation to hand to the client.
+  Free to use in paid engagements, unmodified, with attribution.</p>
+  <div class="actions">
+    <a class="btn" href="EVEglyphDesign_GCF_Scoring_Workbook.xlsx">Download the workbook</a>
+    <a class="btn ghost" href="EVEglyphDesign_GCF_Vendor_Questionnaire.pdf">The questionnaire</a>
+    <a class="btn ghost" href="../gcf/">Read the method</a>
+  </div>
+</div></section>
+<div class="wrap">
+  <div class="cards">
+    <div class="card">
+      <p class="id">EgD-GCF-001 · The method</p>
+      <h3><a href="../gcf/">Global Compliance Framework Assessment</a></h3>
+      <p>Eight sovereignty control domains, a jurisdictional register anchored to the EU AI
+      Act, EU Data Act, GDPR and DORA, four veto conditions, and a 16-point scoring sheet.
+      Read this first; everything else operationalises it.</p>
+      <p><a href="../gcf/">Read the page</a> &nbsp;·&nbsp;
+      <a href="EVEglyphDesign_Global_Compliance_Framework_Assessment.pdf">PDF</a></p>
+    </div>
+    <div class="card">
+      <p class="id">EgD-GCF-003 · Send to the vendor</p>
+      <h3><a href="EVEglyphDesign_GCF_Vendor_Questionnaire.pdf">Vendor questionnaire</a></h3>
+      <p>Forty-one questions ordered by control domain, phrased so an evasive answer is
+      visible as an evasion. Part B explains the three patterns that recur in the replies:
+      the tier shift, the setting that is not a term, and the attestation with the wrong
+      scope.</p>
+      <p><a href="EVEglyphDesign_GCF_Vendor_Questionnaire.pdf">PDF, 4 pages</a></p>
+    </div>
+    <div class="card">
+      <p class="id">Workbook · Score it</p>
+      <h3><a href="EVEglyphDesign_GCF_Scoring_Workbook.xlsx">Fillable scoring workbook</a></h3>
+      <p>Four sheets. Score each domain 0, 1 or 2 from a dropdown, record the evidence, and
+      the result sheet computes the total, the verdict band, and applies the four veto
+      conditions as an override. Untouched, it reads “not yet scored” rather than a false
+      decline.</p>
+      <p><a href="EVEglyphDesign_GCF_Scoring_Workbook.xlsx">XLSX</a></p>
+    </div>
+    <div class="card">
+      <p class="id">EgD-GCF-004 · See it done</p>
+      <h3><a href="EVEglyphDesign_GCF_Worked_Example.pdf">Worked example — Microsoft 365 Copilot</a></h3>
+      <p>A completed assessment scored from public documentation, 2 August 2026. Total 11 of
+      16, no veto triggered. Shows what an evidenced 2, an asserted 1 and an absent 0 look
+      like against a real supplier — and why a default that changed silently costs a point.</p>
+      <p><a href="EVEglyphDesign_GCF_Worked_Example.pdf">PDF, 2 pages</a></p>
+    </div>
+    <div class="card">
+      <p class="id">EgD-GCF-005 · Hand to the client</p>
+      <h3><a href="EVEglyphDesign_GCF_Client_One_Pager.pdf">What we check before you sign</a></h3>
+      <p>One page, no jargon, for the sponsor who wants to know why two weeks of scoring is
+      worth it before a deal everyone already expects to approve.</p>
+      <p><a href="EVEglyphDesign_GCF_Client_One_Pager.pdf">PDF, 1 page</a></p>
+    </div>
+    <div class="card">
+      <p class="id">EgD-GCF-002 · Position it</p>
+      <h3><a href="../positioning/">Six frameworks tell you what to build</a></h3>
+      <p>For the conversation where a client says they already have a framework. BCG,
+      Gartner, Bain, McKinsey and NIST: five adoption frameworks and one governance
+      framework, none of which scores the counterparty.</p>
+      <p><a href="../positioning/">Read the page</a> &nbsp;·&nbsp;
+      <a href="EVEglyphDesign_GCF_Positioning_Note.pdf">PDF</a></p>
+    </div>
+  </div>
+
+  <h2 id="how-to-run-it" style="border-top:2px solid var(--orange);
+    font-family:Fraunces,Georgia,serif; font-size:27px; padding-top:22px;
+    margin:52px 0 14px">How to run it</h2>
+  <ol>
+    <li><strong>Frame it with the client.</strong> Send the one-pager to the sponsor before
+    the evaluation starts, so the exercise is understood as pre-signature leverage rather
+    than a compliance tax.</li>
+    <li><strong>Read the method.</strong> Eight domains, four veto conditions, and the rule
+    that a trust-centre page never scores above 1.</li>
+    <li><strong>Send the questionnaire</strong> while the vendor is still selling. Require a
+    written response citing clauses, not links.</li>
+    <li><strong>Score in the workbook</strong> from what came back. Evidence column is not
+    optional — a score without a citation is an opinion, and it will not survive the first
+    challenge from the vendor's account team.</li>
+    <li><strong>Deliver two things:</strong> the completed sheet, and a ranked list of the
+    clauses to change. The worked example shows what that output looks like.</li>
+  </ol>
+  <p>The whole cycle is a fortnight of elapsed time and a day or two of effort. The output
+  is a negotiation agenda that exists while the buyer still has leverage.</p>
+
+  <h2 id="licence" style="border-top:2px solid var(--orange);
+    font-family:Fraunces,Georgia,serif; font-size:27px; padding-top:22px;
+    margin:52px 0 14px">Practitioner licence</h2>
+  <article><p><strong>Licence ID</strong> EgD-LIC-PRAC-001 · <strong>Version</strong> 1.0 · <strong>Effective</strong> 2 August 2026</p>
+<h2 id="scope">Scope</h2>
+<p>This licence covers the Global Compliance Framework kit published at <a href="https://eveglyphdesign.github.io/enterprise-grade-criteria/use/">eveglyphdesign.github.io/enterprise-grade-criteria/use/</a>: the assessment method (EgD-GCF-001), the positioning note (EgD-GCF-002), the vendor questionnaire (EgD-GCF-003), the worked example (EgD-GCF-004), the client one-pager (EgD-GCF-005), and the scoring workbook.</p>
+<h2 id="you-may">You may</h2>
+<ul>
+<li><strong>Use these documents in paid client engagements.</strong> Advisory work, procurement support, vendor evaluations, board papers — commercial use is permitted and intended.</li>
+<li><strong>Give copies to your clients</strong>, including the one-pager and the questionnaire.</li>
+<li><strong>Fill in the scoring workbook</strong> and deliver the completed sheet to your client as your own work product. The scores you produce are yours; the instrument is ours.</li>
+<li><strong>Quote and cite</strong> any part of the method in your own writing, with attribution.</li>
+</ul>
+<h2 id="you-must">You must</h2>
+<ul>
+<li><strong>Distribute the documents unmodified.</strong> No edits to the text, the domains, the scoring rule, or the veto conditions. The instrument's value is that two practitioners scoring the same proposal reach comparable numbers; a locally adjusted rubric destroys that.</li>
+<li><strong>Retain attribution.</strong> Each document carries its ID, the EVEglyphDesign mark, and the copyright line. These stay. Where you reference the method in a deliverable of your own, name it: <em>EVEglyphDesign Global Compliance Framework Assessment, EgD-GCF-001</em>, and link to the public surface.</li>
+<li><strong>Present it as decision support, not legal advice</strong>, in the same terms the documents themselves use.</li>
+</ul>
+<h2 id="you-may-not">You may not</h2>
+<ul>
+<li><strong>Rebrand.</strong> Removing the EVEglyphDesign mark, replacing it with your own, or presenting the method as your firm's proprietary framework is outside this licence.</li>
+<li><strong>Fork and adapt.</strong> Derivative rubrics, renamed domains, altered scoring bands, and "based on" variants are not permitted without written agreement.</li>
+<li><strong>Resell the instrument itself.</strong> You may charge for your work; you may not charge for the documents as a product, license them onward, or include them in a paid template library.</li>
+<li><strong>Publish client scores under this framework as a register or league table.</strong> There is no shared score repository, and a score produced under this method is a private finding between you and your client. Anonymised aggregate observations in your own writing are fine; naming vendors and scores in a public ranking is not.</li>
+</ul>
+<h2 id="warranty-and-liability">Warranty and liability</h2>
+<p>Provided as is, without warranty. The framework is a structured way of asking questions; it does not guarantee that every material risk in a vendor proposal will be found, and it is not a substitute for legal review. EVEglyphDesign accepts no liability for decisions taken in reliance on it.</p>
+<h2 id="changes-and-termination">Changes and termination</h2>
+<p>Documents are versioned and dated. Superseded versions remain valid for engagements already under way. This licence may be revoked for a specific party in the event of a breach of the "may not" clauses above; it is not revoked retroactively for work already delivered in good faith.</p>
+<h2 id="asking-for-more">Asking for more</h2>
+<p>Rebranding, adaptation, embedding in a productised offering, or a co-branded arrangement are all discussable. Raise an issue on <a href="https://github.com/EVEglyphDesign/enterprise-grade-criteria">the repository</a>.</p></article>
+</div>
+<footer><div class="wrap"><span class="hash">SHA-256 of licence &nbsp;da38ba0961717aee5f7786d7bb3f2487cb492d09905317cf2dbfcddf7fb96961</span><br>© 2026 EVEglyphDesign. All rights reserved. Controlled copy. &nbsp;·&nbsp; Key ID EgD-KEY-2026-07 &nbsp;·&nbsp; Built 2026-08-02T21:39:15Z<br><span class="mark">Pour le bien-être du peuple.</span></div></footer>
+</body></html>
