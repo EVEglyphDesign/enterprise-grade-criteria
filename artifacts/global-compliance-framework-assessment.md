@@ -376,9 +376,15 @@ Reuse is permitted and encouraged, including by vendors preparing to answer it.
 - **Revision policy** — the jurisdictional register in Part II is the volatile section and is
   revised when an anchor date moves. The eight control domains and the four veto conditions
   are stable and change only by version increment.
-- **Related canon** — the seven-point enterprise-grade audit in this repository;
-  `EVEglyphDesign/data-liberation-kit` for the Full-Text Timestamped Extract standard
-  referenced in SD-3; `EVEglyphDesign/truth-ledger` for lock-in scoring of named platforms.
+- **Related canon** — the seven-point enterprise-grade audit in this repository; the
+  [data-liberation-kit](https://github.com/EVEglyphDesign/data-liberation-kit) for the
+  Full-Text Timestamped Extract standard referenced in SD-3; the
+  [truth-ledger](https://github.com/EVEglyphDesign/truth-ledger) for the filed lock-in
+  record the control domains are drawn from — `LOCKIN-01` maps to SD-4, `PORTABILITY-06`
+  to SD-3, `GATING-03` to SD-7.
+- **Routing** — scoring a live vendor proposal with this instrument is Class F.2 in the
+  [task routing index](https://github.com/EVEglyphDesign/eve-glyph-index/blob/main/routing/TASK-ROUTING.md).
+  Filing a defect against a tier claim already observed remains Class F.1.
 
 ---
 
