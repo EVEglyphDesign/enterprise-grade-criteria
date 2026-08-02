@@ -99,6 +99,14 @@ blockquote{
   font-family:Fraunces,Georgia,serif; font-size:19px; line-height:1.5;
 }
 blockquote p{margin:0; max-width:none}
+.tablewrap{overflow-x:auto; margin:22px 0 26px}
+table{border-collapse:collapse; width:100%; font-size:15px; line-height:1.5}
+thead th{
+  text-align:left; background:var(--cream2); border-bottom:2px solid var(--orange);
+  padding:10px 12px; font-weight:600; vertical-align:bottom;
+}
+tbody td{padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
 code{
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.88em;
   background:var(--cream2); border:1px solid var(--line); border-radius:2px;
@@ -238,6 +246,23 @@ def render(md):
         if ln.strip() == "---":
             flush_para(); close_lists()
             i += 1
+            continue
+        if ln.startswith("|") and i + 1 < len(lines) and \
+                set(lines[i + 1].replace("|", "").strip()) <= set("-: "):
+            flush_para(); close_lists()
+            def cells(r):
+                return [c.strip() for c in r.strip().strip("|").split("|")]
+            head = cells(ln); i += 2
+            body = []
+            while i < len(lines) and lines[i].startswith("|"):
+                body.append(cells(lines[i])); i += 1
+            t = ["<div class=\"tablewrap\"><table><thead><tr>"]
+            t += [f"<th>{inline(c)}</th>" for c in head]
+            t.append("</tr></thead><tbody>")
+            for r in body:
+                t.append("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>")
+            t.append("</tbody></table></div>")
+            out.append("".join(t))
             continue
         m = re.match(r"^(\d+)\. (.*)", ln)
         if ln.startswith("- ") or m:
