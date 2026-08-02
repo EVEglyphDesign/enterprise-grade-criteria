@@ -1,0 +1,121 @@
+name: Practitioner sign-up
+description: Register as a practitioner using the Global Compliance Framework kit with your own clients.
+title: "Practitioner sign-up: <your name or firm>"
+labels: ["practitioner"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Signing up puts you on the public practitioner register and lets the work be shared
+        across LinkedIn, X and YouTube — including through the SAPfans community — so a peer
+        looking for someone who runs this assessment can find you.
+
+        **This issue is public.** Everything you enter here is visible to anyone. Leave a
+        field blank if you do not want it published; only the name and the licence
+        acknowledgement are required.
+
+        By submitting you accept
+        [EgD-LIC-PRAC-001](https://eveglyphdesign.github.io/enterprise-grade-criteria/use/#licence):
+        use the documents unmodified, keep the attribution, no rebranding, no derivative
+        rubrics, no public register of client scores.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The name you want on the register.
+      placeholder: Jane Doe
+    validations:
+      required: true
+
+  - type: input
+    id: firm
+    attributes:
+      label: Firm or practice
+      placeholder: Independent · Doe Advisory · Acme Consulting
+    validations:
+      required: false
+
+  - type: input
+    id: country
+    attributes:
+      label: Country or region you practise in
+      description: Useful because the jurisdictional register in EgD-GCF-001 is regime-specific.
+      placeholder: Germany · EU · United States · Canada
+    validations:
+      required: false
+
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn profile URL
+      placeholder: https://www.linkedin.com/in/yourhandle/
+    validations:
+      required: false
+
+  - type: input
+    id: x
+    attributes:
+      label: X handle
+      placeholder: "@yourhandle"
+    validations:
+      required: false
+
+  - type: input
+    id: youtube
+    attributes:
+      label: YouTube channel URL
+      placeholder: https://www.youtube.com/@yourchannel
+    validations:
+      required: false
+
+  - type: input
+    id: sapfans
+    attributes:
+      label: SAPfans or other community handle
+      description: Where you already post, so a share can be routed there rather than duplicated.
+      placeholder: SAPfans · SAP Community · a mailing list
+    validations:
+      required: false
+
+  - type: dropdown
+    id: use
+    attributes:
+      label: How you expect to use the kit
+      options:
+        - Vendor evaluations for client organisations
+        - Procurement or contract review inside my own organisation
+        - Teaching, writing or community work
+        - Still deciding
+    validations:
+      required: true
+
+  - type: dropdown
+    id: amplify
+    attributes:
+      label: Cross-platform sharing
+      description: Whether EVEglyphDesign may tag or mention you when the kit is posted.
+      options:
+        - "Yes — tag me on LinkedIn, X and YouTube"
+        - "Yes, but LinkedIn only"
+        - "List me on the register, but do not tag me"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: A vendor you intend to score, a jurisdiction the register does not cover yet, or a question about the licence.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Licence acknowledgement
+      options:
+        - label: I have read EgD-LIC-PRAC-001 and will use the documents unmodified, with attribution.
+          required: true
+        - label: I understand this issue is public and I am content for the details above to appear on the practitioner register.
+          required: true

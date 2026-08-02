@@ -99,6 +99,19 @@ blockquote{
   font-family:Fraunces,Georgia,serif; font-size:19px; line-height:1.5;
 }
 blockquote p{margin:0; max-width:none}
+.copyblock{
+  margin:18px 0 26px; padding:18px 20px; background:var(--cream2);
+  border:1px solid var(--line); border-left:3px solid var(--orange);
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:14px;
+  line-height:1.65; white-space:pre-wrap; overflow-wrap:anywhere; color:var(--ink);
+}
+.copyblock b{font-weight:700}
+.signup{
+  margin:26px 0 8px; padding:26px 28px; background:var(--cream2);
+  border:1px solid var(--line); border-top:3px solid var(--orange);
+}
+.signup p{max-width:none}
+.signup .actions{margin-top:18px}
 .tablewrap{overflow-x:auto; margin:22px 0 26px}
 table{border-collapse:collapse; width:100%; font-size:15px; line-height:1.5}
 thead th{
@@ -420,6 +433,11 @@ def build_use():
     lic_html, _ = render(lic_raw)
     sha = hashlib.sha256(lic_raw.encode("utf-8")).hexdigest()
 
+    reg_src = os.path.join(ROOT, "registry", "PRACTITIONERS.md")
+    reg_raw = open(reg_src, encoding="utf-8").read()
+    m = re.search(r"## The register\n(.*?)\n## ", reg_raw, flags=re.S)
+    register_html, _ = render("# x\n\n" + m.group(1).strip() + "\n")
+
     files = [
         ("EVEglyphDesign_Global_Compliance_Framework_Assessment.pdf", "gcf"),
         ("EVEglyphDesign_GCF_Positioning_Note.pdf", "positioning"),
@@ -442,6 +460,7 @@ def build_use():
     <a class="btn" href="EVEglyphDesign_GCF_Scoring_Workbook.xlsx">Download the workbook</a>
     <a class="btn ghost" href="EVEglyphDesign_GCF_Vendor_Questionnaire.pdf">The questionnaire</a>
     <a class="btn ghost" href="../gcf/">Read the method</a>
+    <a class="btn ghost" href="#sign-up">Sign up as a practitioner</a>
   </div>
 </div></section>
 <div class="wrap">
@@ -519,6 +538,73 @@ def build_use():
   <p>The whole cycle is a fortnight of elapsed time and a day or two of effort. The output
   is a negotiation agenda that exists while the buyer still has leverage.</p>
 
+  <h2 id="sign-up" style="border-top:2px solid var(--orange);
+    font-family:Fraunces,Georgia,serif; font-size:27px; padding-top:22px;
+    margin:52px 0 14px">Sign up as a practitioner</h2>
+  <div class="signup">
+    <p>Signing up puts you on the public practitioner register: a short row saying you score
+    vendor proposals with a named, versioned instrument rather than freehand. It costs
+    nothing, there is no assessment to pass, and no fee moves in either direction.</p>
+    <p>It also records where you publish — LinkedIn, X, YouTube, SAPfans — so a piece of
+    work can be shared across all of them in one pass, and so a peer looking for someone who
+    runs this assessment can find you. Handles are optional; ask to be listed without tagging
+    and you are listed without handles.</p>
+    <p>The form is a GitHub issue. It is public, which is the point — the register has to be
+    verifiable by the people reading it.</p>
+    <div class="actions">
+      <a class="btn" href="https://github.com/EVEglyphDesign/enterprise-grade-criteria/issues/new?template=practitioner-signup.yml">Sign up</a>
+      <a class="btn ghost" href="#register">See who is listed</a>
+      <a class="btn ghost" href="#licence">Read the licence first</a>
+    </div>
+  </div>
+
+  <h2 id="register" style="border-top:2px solid var(--orange);
+    font-family:Fraunces,Georgia,serif; font-size:27px; padding-top:22px;
+    margin:52px 0 14px">Practitioner register</h2>
+  <p>EgD-REG-PRAC-001. Appended in the order received, generated from
+  <a href="https://github.com/EVEglyphDesign/enterprise-grade-criteria/blob/main/registry/PRACTITIONERS.md">the register file in the repository</a>.
+  Listing is not certification or endorsement: EVEglyphDesign does not assess practitioners.
+  Removal is honoured on request, without discussion.</p>
+  {register_html}
+
+  <h2 id="share" style="border-top:2px solid var(--orange);
+    font-family:Fraunces,Georgia,serif; font-size:27px; padding-top:22px;
+    margin:52px 0 14px">Share it</h2>
+  <p>Copy-ready text, so the kit travels as one link rather than five attachments. Attribution
+  is already in each block; leave it in. The canonical link is always
+  <a href="https://eveglyphdesign.github.io/enterprise-grade-criteria/use/">the practitioner
+  kit page</a> rather than a direct PDF, so a reader arrives at the licence and the method
+  together.</p>
+  <p><b>LinkedIn</b> — for a procurement, SAP or architecture audience</p>
+  <div class="copyblock">Most AI strategy frameworks tell you how to adopt. None of them score the vendor across the table.
+
+EVEglyphDesign has published a buyer-side instrument that does: eight sovereignty control domains, four veto conditions, a 16-point scoring sheet, a 41-question vendor questionnaire, a fillable workbook, and a worked example scored against Microsoft 365 Copilot from public documentation — 11 of 16, proceed with conditions.
+
+Free to use with your own clients, unmodified, with attribution.
+
+https://eveglyphdesign.github.io/enterprise-grade-criteria/use/
+
+#DataSovereignty #AIGovernance #Procurement #SAP #EUAIAct</div>
+  <p><b>X</b> — short form</p>
+  <div class="copyblock">Six public AI frameworks tell you what to build. None score the vendor.
+
+Eight sovereignty domains, four vetoes, a 16-point sheet, a 41-question supplier questionnaire, and a worked example against M365 Copilot (11/16).
+
+Free to use with your clients, unmodified, attributed.
+
+https://eveglyphdesign.github.io/enterprise-grade-criteria/use/</div>
+  <p><b>YouTube</b> — description line for a walkthrough or a community stream</p>
+  <div class="copyblock">Kit used in this video — EVEglyphDesign Global Compliance Framework Assessment (EgD-GCF-001): the reference model, the vendor questionnaire, the scoring workbook and a worked example, free to use with your own clients under the practitioner licence.
+
+https://eveglyphdesign.github.io/enterprise-grade-criteria/use/</div>
+  <p><b>SAPfans and community forums</b> — plain text, no markup</p>
+  <div class="copyblock">If you are reviewing an AI proposal from an incumbent vendor, there is now a public scoring instrument for the sovereignty side of it: who holds title to derived data, whether your prompts train anything, whether you can get the derived layer back out, what happens on switching, where inference actually runs, what substrate sits underneath, what is logged, and what exit looks like.
+
+Eight domains, scored 0/1/2, with four conditions that fail the proposal outright regardless of total. There is a questionnaire to send the supplier, a workbook to score in, and a worked example against Microsoft 365 Copilot done entirely from public documentation.
+
+EVEglyphDesign Global Compliance Framework Assessment, EgD-GCF-001:
+https://eveglyphdesign.github.io/enterprise-grade-criteria/use/</div>
+
   <h2 id="licence" style="border-top:2px solid var(--orange);
     font-family:Fraunces,Georgia,serif; font-size:27px; padding-top:22px;
     margin:52px 0 14px">Practitioner licence</h2>
@@ -586,6 +672,9 @@ def build_index():
       question vendor questionnaire, a fillable scoring workbook, a worked example against a
       named vendor, a client-facing one-pager, and a licence permitting use in paid
       engagements, unmodified, with attribution.</p>
+      <p><a href="use/#sign-up">Sign up as a practitioner</a> — free, no assessment, and it
+      puts you on the public register with your LinkedIn, X and YouTube handles so the work
+      can be shared across all of them in one pass.</p>
       <p><a href="use/">Open the kit</a> &nbsp;·&nbsp;
       <a href="use/EVEglyphDesign_GCF_Scoring_Workbook.xlsx">Workbook</a> &nbsp;·&nbsp;
       <a href="use/EVEglyphDesign_GCF_Vendor_Questionnaire.pdf">Questionnaire</a></p>

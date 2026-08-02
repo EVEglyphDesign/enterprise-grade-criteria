@@ -34,6 +34,12 @@ Advisers may run this assessment for their own clients, in paid engagements, pro
 documents are used unmodified and EVEglyphDesign is named — see
 [`PRACTITIONER-LICENCE.md`](PRACTITIONER-LICENCE.md).
 
+**Sign up as a practitioner** — [open a sign-up issue](https://github.com/EVEglyphDesign/enterprise-grade-criteria/issues/new?template=practitioner-signup.yml).
+Free, no assessment. You are appended to [`registry/PRACTITIONERS.md`](registry/PRACTITIONERS.md)
+(**EgD-REG-PRAC-001**) and, if you want to be tagged, your LinkedIn, X and YouTube handles are
+recorded so a post can carry across all three at once — including through SAPfans. Removal on
+request, without discussion.
+
 - [`artifacts/gcf-vendor-questionnaire.md`](artifacts/gcf-vendor-questionnaire.md) ([PDF](artifacts/EVEglyphDesign_GCF_Vendor_Questionnaire.pdf)) — **EgD-GCF-003**, forty-one questions to put to a supplier in writing, ordered by control domain, plus the three patterns that recur in the replies
 - [`artifacts/EVEglyphDesign_GCF_Scoring_Workbook.xlsx`](artifacts/EVEglyphDesign_GCF_Scoring_Workbook.xlsx) — the fillable 16-point scoring workbook. Dropdown scoring, evidence columns, computed verdict, and the four veto conditions applied as an override
 - [`artifacts/gcf-worked-example.md`](artifacts/gcf-worked-example.md) ([PDF](artifacts/EVEglyphDesign_GCF_Worked_Example.pdf)) — **EgD-GCF-004**, a completed assessment against Microsoft 365 Copilot scored from public documentation on 2 August 2026. Total 11 of 16, no veto triggered
