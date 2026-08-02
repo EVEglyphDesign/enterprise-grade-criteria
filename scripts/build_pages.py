@@ -445,7 +445,7 @@ def build_use():
   </div>
 </div></section>
 <div class="wrap">
-  <div class="cards">
+  <div class="cards" id="kit">
     <div class="card">
       <p class="id">EgD-GCF-001 · The method</p>
       <h3><a href="../gcf/">Global Compliance Framework Assessment</a></h3>
