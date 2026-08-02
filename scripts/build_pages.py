@@ -549,10 +549,13 @@ def build_use():
     work can be shared across all of them in one pass, and so a peer looking for someone who
     runs this assessment can find you. Handles are optional; ask to be listed without tagging
     and you are listed without handles.</p>
-    <p>The form is a GitHub issue. It is public, which is the point — the register has to be
-    verifiable by the people reading it.</p>
+    <p>Two ways in. The form is a GitHub issue — public, which is the point, since the
+    register has to be verifiable by the people reading it. If you do not hold a GitHub
+    account and do not want one, message Dany Theriault on LinkedIn with your name, firm,
+    region and the handles you want listed, and the row is added for you.</p>
     <div class="actions">
-      <a class="btn" href="https://github.com/EVEglyphDesign/enterprise-grade-criteria/issues/new?template=practitioner-signup.yml">Sign up</a>
+      <a class="btn" href="https://github.com/EVEglyphDesign/enterprise-grade-criteria/issues/new?template=practitioner-signup.yml">Sign up on GitHub</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/danytheriault/">Sign up by LinkedIn message</a>
       <a class="btn ghost" href="#register">See who is listed</a>
       <a class="btn ghost" href="#licence">Read the licence first</a>
     </div>

@@ -13,6 +13,11 @@ and does not receive a fee from them.
 Entries are appended in the order received. To be removed, or to correct a row, open an
 issue saying so — a removal is honoured without discussion.
 
+No GitHub account, and no wish to make one? Message
+[Dany Theriault on LinkedIn](https://www.linkedin.com/in/danytheriault/) with your name, firm,
+region and the handles you want listed, and the row is added on your behalf. Same terms, same
+register, no account.
+
 Handles are recorded so that a piece of work can be shared across LinkedIn, X and YouTube
 in one pass rather than reposted piecemeal, including through the SAPfans community. A
 practitioner who asks to be listed without being tagged is listed without handles.

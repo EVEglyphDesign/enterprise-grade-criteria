@@ -35,7 +35,7 @@ documents are used unmodified and EVEglyphDesign is named — see
 [`PRACTITIONER-LICENCE.md`](PRACTITIONER-LICENCE.md).
 
 **Sign up as a practitioner** — [open a sign-up issue](https://github.com/EVEglyphDesign/enterprise-grade-criteria/issues/new?template=practitioner-signup.yml).
-Free, no assessment. You are appended to [`registry/PRACTITIONERS.md`](registry/PRACTITIONERS.md)
+Free, no assessment — or message [Dany Theriault on LinkedIn](https://www.linkedin.com/in/danytheriault/) if you do not hold a GitHub account. You are appended to [`registry/PRACTITIONERS.md`](registry/PRACTITIONERS.md)
 (**EgD-REG-PRAC-001**) and, if you want to be tagged, your LinkedIn, X and YouTube handles are
 recorded so a post can carry across all three at once — including through SAPfans. Removal on
 request, without discussion.
