@@ -369,7 +369,9 @@ def build_note():
     src = os.path.join(ROOT, "artifacts", "gcf-positioning-note.md")
     raw = open(src, encoding="utf-8").read()
     sha = hashlib.sha256(raw.encode("utf-8")).hexdigest()
-    trimmed = re.sub(r"\A# [^\n]*\n", "# x\n", raw, flags=re.S | re.M)
+    # The hero lede already carries the opening paragraph; drop it from the body so the
+    # page does not say the same thing twice.
+    trimmed = re.sub(r"\A# [^\n]*\n\s*.*?\n\n", "# x\n\n", raw, flags=re.S)
     body_html, _ = render(trimmed)
     pdf = "EVEglyphDesign_GCF_Positioning_Note.pdf"
     hero = f"""
