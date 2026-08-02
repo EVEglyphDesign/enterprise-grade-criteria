@@ -313,6 +313,7 @@ def build_gcf():
   <div class="actions">
     <a class="btn" href="{pdf}">Download the controlled PDF</a>
     <a class="btn ghost" href="https://github.com/EVEglyphDesign/enterprise-grade-criteria/blob/main/artifacts/global-compliance-framework-assessment.md">Markdown source</a>
+    <a class="btn ghost" href="../positioning/">Positioning note</a>
     <a class="btn ghost" href="../index.html">All artifacts</a>
   </div>
 </div></section>
@@ -333,6 +334,50 @@ def build_gcf():
         canonical="https://eveglyphdesign.github.io/enterprise-grade-criteria/gcf/",
     )
     d = os.path.join(DOCS, "gcf")
+    os.makedirs(d, exist_ok=True)
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(out)
+    shutil.copy(os.path.join(ROOT, "artifacts", pdf), os.path.join(d, pdf))
+    return sha
+
+
+def build_note():
+    src = os.path.join(ROOT, "artifacts", "gcf-positioning-note.md")
+    raw = open(src, encoding="utf-8").read()
+    sha = hashlib.sha256(raw.encode("utf-8")).hexdigest()
+    trimmed = re.sub(r"\A# [^\n]*\n", "# x\n", raw, flags=re.S | re.M)
+    body_html, _ = render(trimmed)
+    pdf = "EVEglyphDesign_GCF_Positioning_Note.pdf"
+    hero = f"""
+<section class="hero"><div class="wrap">
+  <p class="eyebrow">EVEglyphDesign · Positioning note</p>
+  <h1>Six frameworks tell you what to build</h1>
+  <div class="rule"></div>
+  <p class="lede">The public AI strategy frameworks from BCG, Gartner, Bain, McKinsey and
+  NIST are widely circulated and broadly sound. Five are adoption frameworks; one is a
+  governance framework. Not one of them scores the counterparty. One page on where
+  EgD-GCF-001 sits against them, and how it pairs with the NIST AI RMF.</p>
+  <div class="meta">
+    <span><b>Document ID</b> EgD-GCF-002</span>
+    <span><b>Key ID</b> {KEY_ID}</span>
+    <span><b>Status</b> positioning note, v1.0</span>
+  </div>
+  <div class="actions">
+    <a class="btn" href="{pdf}">Download the one-page PDF</a>
+    <a class="btn ghost" href="../gcf/">Read EgD-GCF-001</a>
+    <a class="btn ghost" href="../index.html">All artifacts</a>
+  </div>
+</div></section>
+<div class="wrap"><article>{body_html}</article></div>
+"""
+    foot = footer(f'<span class="hash">SHA-256 of source &nbsp;{sha}</span><br>')
+    out = page(
+        "Six frameworks tell you what to build — EgD-GCF-002 — EVEglyphDesign",
+        "Where the EVEglyphDesign Global Compliance Framework Assessment sits against the "
+        "public AI strategy frameworks from BCG, Gartner, Bain, McKinsey and NIST.",
+        hero + foot, depth=1,
+        canonical="https://eveglyphdesign.github.io/enterprise-grade-criteria/positioning/",
+    )
+    d = os.path.join(DOCS, "positioning")
     os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(out)
     shutil.copy(os.path.join(ROOT, "artifacts", pdf), os.path.join(d, pdf))
@@ -364,6 +409,16 @@ def build_index():
       and ten patterns to flag in an incumbent vendor's AI proposal.</p>
       <p><a href="gcf/">Read the page</a> &nbsp;·&nbsp;
       <a href="gcf/EVEglyphDesign_Global_Compliance_Framework_Assessment.pdf">PDF</a></p>
+    </div>
+    <div class="card">
+      <p class="id">EgD-GCF-002 · Positioning note</p>
+      <h3><a href="positioning/">Six frameworks tell you what to build</a></h3>
+      <p>BCG, Gartner, Bain, McKinsey and NIST publish the frameworks every board has
+      already seen. Five are adoption frameworks; one is a governance framework. None
+      scores the counterparty. One page on the gap, and how EgD-GCF-001 pairs with the
+      NIST AI RMF rather than competing with it.</p>
+      <p><a href="positioning/">Read the page</a> &nbsp;·&nbsp;
+      <a href="positioning/EVEglyphDesign_GCF_Positioning_Note.pdf">PDF</a></p>
     </div>
     <div class="card">
       <p class="id">Template</p>
@@ -411,5 +466,6 @@ if __name__ == "__main__":
     os.makedirs(DOCS, exist_ok=True)
     open(os.path.join(DOCS, ".nojekyll"), "w").close()
     sha = build_gcf()
+    nsha = build_note()
     build_index()
-    print("built docs/ · EgD-GCF-001 sha", sha[:16])
+    print("built docs/ · EgD-GCF-001", sha[:16], "· EgD-GCF-002", nsha[:16])
