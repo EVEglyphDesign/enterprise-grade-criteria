@@ -284,7 +284,10 @@ def build_gcf():
     src = os.path.join(ROOT, "artifacts", "global-compliance-framework-assessment.md")
     raw = open(src, encoding="utf-8").read()
     sha = hashlib.sha256(raw.encode("utf-8")).hexdigest()
-    body_html, toc = render(raw)
+    # The hero already carries the abstract and the document identifiers; drop the
+    # preamble between the H1 and the first section so the page does not repeat itself.
+    trimmed = re.sub(r"\A# [^\n]*\n.*?(?=^## )", "# x\n\n", raw, flags=re.S | re.M)
+    body_html, toc = render(trimmed)
 
     nav = ['<nav class="toc"><p>On this page</p>']
     for lvl, sid, txt in toc:
