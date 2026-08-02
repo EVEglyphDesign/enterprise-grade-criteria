@@ -8,6 +8,8 @@
 
 Public rubric and companion artifacts for auditing AI agent platforms against the enterprise-grade tier they claim.
 
+**Public surface:** [eveglyphdesign.github.io/enterprise-grade-criteria](https://eveglyphdesign.github.io/enterprise-grade-criteria/) · [EgD-GCF-001 Global Compliance Framework Assessment](https://eveglyphdesign.github.io/enterprise-grade-criteria/gcf/)
+
 Derived from EVE Glyph Design canon, specifically [`digital-stem-cell/framework/20-enterprise-tier-claim-and-substrate-accountability.md`](https://github.com/EVEglyphDesign/digital-stem-cell/blob/main/framework/20-enterprise-tier-claim-and-substrate-accountability.md).
 
 ## The core position
@@ -22,7 +24,7 @@ This repository publishes the audit rubric plainly and provides worked-example a
 
 - [`artifacts/foundation-model-roster-template.md`](artifacts/foundation-model-roster-template.md) — template for the versioned foundation-model roster every enterprise-tier AI platform should publish
 - [`artifacts/failure-mode-disclosure-template.md`](artifacts/failure-mode-disclosure-template.md) — template for the periodic failure-mode disclosure every enterprise-tier AI platform should publish, with a worked example populated from the framework operator's direct observation
-- [`artifacts/global-compliance-framework-assessment.md`](artifacts/global-compliance-framework-assessment.md) ([PDF](artifacts/EVEglyphDesign_Global_Compliance_Framework_Assessment.pdf)) — **EgD-GCF-001**, the buyer-side reference model. Eight sovereignty control domains, a jurisdictional register anchored to the EU AI Act, EU Data Act, GDPR, DORA and the major national regimes, four veto conditions, a 16-point scoring sheet, contract language hooks, and ten patterns to flag in an incumbent vendor's AI proposal. Written to be handed to a vendor unchanged
+- [`artifacts/global-compliance-framework-assessment.md`](artifacts/global-compliance-framework-assessment.md) ([public page](https://eveglyphdesign.github.io/enterprise-grade-criteria/gcf/) · [PDF](artifacts/EVEglyphDesign_Global_Compliance_Framework_Assessment.pdf)) — **EgD-GCF-001**, the buyer-side reference model. Eight sovereignty control domains, a jurisdictional register anchored to the EU AI Act, EU Data Act, GDPR, DORA and the major national regimes, four veto conditions, a 16-point scoring sheet, contract language hooks, and ten patterns to flag in an incumbent vendor's AI proposal. Written to be handed to a vendor unchanged
 - [`artifacts/open-weights-letter-2026-07-24-briefing.md`](artifacts/open-weights-letter-2026-07-24-briefing.md) ([PDF](artifacts/open-weights-letter-2026-07-24-briefing.pdf)) — team briefing on the 24 July 2026 *Open Weights and American AI Leadership* letter and how it interacts with this rubric. Records who signed, who did not (OpenAI, Anthropic, Google, xAI), and the audit-context reading of the non-signers
 
 ## The seven-point audit

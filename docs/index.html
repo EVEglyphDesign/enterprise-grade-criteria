@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enterprise-Grade Criteria for AI Agent Platforms — EVEglyphDesign</title>
+<meta name="description" content="Public rubric and companion artifacts for auditing AI agent platforms against the enterprise-grade tier they claim.">
+<meta property="og:title" content="Enterprise-Grade Criteria for AI Agent Platforms — EVEglyphDesign">
+<meta property="og:description" content="Public rubric and companion artifacts for auditing AI agent platforms against the enterprise-grade tier they claim.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://eveglyphdesign.github.io/enterprise-grade-criteria/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdfaf4; --cream2:#f7f2e7; --ink:#1a1a1a; --line:#e7e1d3;
+  --mute:#6b665c; --orange:#e87722;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--orange); text-decoration:none; border-bottom:1px solid rgba(232,119,34,.35)}
+a:hover{border-bottom-color:var(--orange)}
+header.bar{
+  border-bottom:1px solid var(--line); background:var(--cream);
+  position:sticky; top:0; z-index:10;
+}
+header.bar .in{
+  max-width:1080px; margin:0 auto; padding:14px 28px;
+  display:flex; gap:16px; align-items:baseline; justify-content:space-between;
+  font-size:12.5px; letter-spacing:.04em; color:var(--mute);
+}
+header.bar .in a{color:var(--mute); border:0}
+header.bar .in a:hover{color:var(--orange)}
+header.bar strong{color:var(--ink); font-weight:600; letter-spacing:0}
+.wrap{max-width:1080px; margin:0 auto; padding:0 28px}
+.hero{padding:66px 0 34px; border-bottom:1px solid var(--line)}
+.eyebrow{
+  color:var(--orange); font-size:11.5px; font-weight:600;
+  letter-spacing:.22em; text-transform:uppercase; margin:0 0 20px;
+}
+h1{
+  font-family:Fraunces,Georgia,serif; font-weight:700; font-size:clamp(34px,5.2vw,52px);
+  line-height:1.08; letter-spacing:-.015em; margin:0 0 22px; max-width:17ch;
+}
+.rule{width:112px; height:3px; background:var(--orange); margin:0 0 26px}
+.lede{font-size:19.5px; line-height:1.55; max-width:62ch; margin:0 0 26px; color:#2b2926}
+.meta{
+  font-size:12.5px; color:var(--mute); display:flex; flex-wrap:wrap;
+  gap:8px 20px; margin:0 0 4px;
+}
+.meta b{font-weight:600; color:var(--ink)}
+.actions{display:flex; flex-wrap:wrap; gap:12px; margin:30px 0 4px}
+.btn{
+  display:inline-block; padding:11px 20px; border-radius:2px; font-size:14px;
+  font-weight:600; border:1px solid var(--orange); background:var(--orange);
+  color:var(--cream); letter-spacing:.01em;
+}
+.btn:hover{background:#d76b18; border-color:#d76b18; color:var(--cream)}
+.btn.ghost{background:transparent; color:var(--ink); border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--orange); color:var(--orange); background:transparent}
+.cols{display:grid; grid-template-columns:230px minmax(0,1fr); gap:56px; padding:44px 0 70px}
+nav.toc{position:sticky; top:74px; align-self:start; font-size:13.5px; line-height:1.5}
+nav.toc p{
+  margin:0 0 12px; font-size:11px; font-weight:600; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--mute);
+}
+nav.toc a{display:block; padding:5px 0 5px 12px; color:var(--mute); border:0;
+  border-left:2px solid var(--line)}
+nav.toc a:hover{color:var(--orange); border-left-color:var(--orange)}
+article h2{
+  font-family:Fraunces,Georgia,serif; font-weight:700; font-size:27px; line-height:1.2;
+  letter-spacing:-.01em; margin:52px 0 14px; padding-top:22px;
+  border-top:2px solid var(--orange);
+}
+article h2:first-child{margin-top:0}
+article h3{
+  font-family:Fraunces,Georgia,serif; font-weight:700; font-size:20px;
+  margin:34px 0 10px; letter-spacing:-.005em;
+}
+article p{margin:0 0 16px; max-width:70ch}
+article ul,article ol{margin:0 0 18px; padding-left:22px; max-width:70ch}
+article li{margin:0 0 10px}
+article li::marker{color:var(--orange)}
+blockquote{
+  margin:26px 0; padding:20px 24px; background:var(--cream2);
+  border:1px solid var(--line); border-left:3px solid var(--orange);
+  font-family:Fraunces,Georgia,serif; font-size:19px; line-height:1.5;
+}
+blockquote p{margin:0; max-width:none}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.88em;
+  background:var(--cream2); border:1px solid var(--line); border-radius:2px;
+  padding:1px 5px;
+}
+hr{border:0; border-top:1px solid var(--line); margin:40px 0}
+footer{border-top:1px solid var(--line); padding:26px 0 46px; font-size:12.5px;
+  color:var(--mute); line-height:1.7}
+footer .mark{font-family:Fraunces,Georgia,serif; font-style:italic; color:var(--ink)}
+.hash{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px;
+  word-break:break-all}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px; margin:32px 0 8px}
+.card{
+  border:1px solid var(--line); background:var(--cream2); padding:24px 24px 22px;
+  border-top:3px solid var(--orange);
+}
+.card h3{font-family:Fraunces,Georgia,serif; font-size:20px; margin:0 0 8px; line-height:1.25}
+.card h3 a{border:0; color:var(--ink)}
+.card h3 a:hover{color:var(--orange)}
+.card p{margin:0 0 14px; font-size:15px; color:#3a3833}
+.card .id{font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--mute); font-weight:600; margin:0 0 10px}
+@media(max-width:860px){
+  .cols{grid-template-columns:1fr; gap:0; padding-top:30px}
+  nav.toc{position:static; margin-bottom:36px; border-bottom:1px solid var(--line);
+    padding-bottom:24px}
+  .hero{padding:44px 0 28px}
+}
+</style>
+</head><body>
+<header class="bar"><div class="in"><span><strong>EVEglyphDesign</strong> &nbsp;·&nbsp; <a href="index.html">Enterprise-Grade Criteria</a></span><span><a href="https://github.com/EVEglyphDesign/enterprise-grade-criteria">Repository</a> &nbsp;·&nbsp; <a href="https://eveglyphdesign.github.io/eve-glyph-boot-contract/">Boot contract</a></span></div></header>
+
+<section class="hero"><div class="wrap">
+  <p class="eyebrow">EVEglyphDesign · Public rubric</p>
+  <h1>Enterprise-Grade Criteria for AI Agent Platforms</h1>
+  <div class="rule"></div>
+  <p class="lede">Enterprise is not a pricing tier. It is a substrate-accountability
+  commitment. When a vendor sells the enterprise tier, the vendor accepts accountability
+  for the whole stack it delivers — including the foundation models it did not build.</p>
+  <div class="actions">
+    <a class="btn" href="gcf/">Read EgD-GCF-001</a>
+    <a class="btn ghost" href="https://github.com/EVEglyphDesign/enterprise-grade-criteria">Repository</a>
+  </div>
+</div></section>
+<div class="wrap">
+  <div class="cards">
+    <div class="card">
+      <p class="id">EgD-GCF-001 · Reference model</p>
+      <h3><a href="gcf/">Global Compliance Framework Assessment</a></h3>
+      <p>The buyer-side instrument. Eight sovereignty control domains, a jurisdictional
+      register anchored to the EU AI Act, EU Data Act, GDPR, DORA and the major national
+      regimes, four veto conditions, a 16-point scoring sheet, contract language hooks,
+      and ten patterns to flag in an incumbent vendor's AI proposal.</p>
+      <p><a href="gcf/">Read the page</a> &nbsp;·&nbsp;
+      <a href="gcf/EVEglyphDesign_Global_Compliance_Framework_Assessment.pdf">PDF</a></p>
+    </div>
+    <div class="card">
+      <p class="id">Template</p>
+      <h3><a href="https://github.com/EVEglyphDesign/enterprise-grade-criteria/blob/main/artifacts/foundation-model-roster-template.md">Foundation-model roster</a></h3>
+      <p>The versioned roster every enterprise-tier AI platform should publish, so
+      customers know which model substrates sit behind the surface they bought.</p>
+    </div>
+    <div class="card">
+      <p class="id">Template</p>
+      <h3><a href="https://github.com/EVEglyphDesign/enterprise-grade-criteria/blob/main/artifacts/failure-mode-disclosure-template.md">Failure-mode disclosure</a></h3>
+      <p>The periodic disclosure that turns failure handling into something auditable
+      rather than conversational — named patterns, correction status, remediation.</p>
+    </div>
+    <div class="card">
+      <p class="id">Briefing</p>
+      <h3><a href="https://github.com/EVEglyphDesign/enterprise-grade-criteria/blob/main/artifacts/open-weights-letter-2026-07-24-briefing.md">Open Weights letter, 24 July 2026</a></h3>
+      <p>Who signed, who did not, and how the letter interacts with this rubric.</p>
+    </div>
+  </div>
+
+  <h2 id="the-seven-point-audit" style="border-top:2px solid var(--orange);
+    font-family:Fraunces,Georgia,serif; font-size:27px; padding-top:22px;
+    margin:52px 0 14px">The seven-point audit</h2>
+  <p>An AI platform vendor claiming enterprise tier should publish its foundation-model
+  roster, publish its alignment overlay, publish failure-mode disclosures at real cadence,
+  provide substrate-selection controls, accept liability commensurate with the tier claim,
+  publish an operator-reachable escalation path, and fund a red team on substrate honesty.
+  The full statement is in
+  <a href="https://github.com/EVEglyphDesign/enterprise-grade-criteria#the-seven-point-audit">the repository README</a>.</p>
+  <p>The rubric runs at product tier, not at persons. It does not adjudicate individual
+  founders, executives, or employees at any vendor.</p>
+</div>
+<footer><div class="wrap">© 2026 EVEglyphDesign. All rights reserved. Controlled copy. &nbsp;·&nbsp; Key ID EgD-KEY-2026-07 &nbsp;·&nbsp; Built 2026-08-02T00:06:32Z<br><span class="mark">Pour le bien-être du peuple.</span></div></footer>
+</body></html>
